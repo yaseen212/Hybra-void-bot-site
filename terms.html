@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | HYBRA VOID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #07090e;
+            --bg-card: #0f131c;
+            --primary: #38bdf8;
+            --secondary: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.8;
+            background-image: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.07) 0%, transparent 45%);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8%;
+            background: rgba(7, 9, 14, 0.9);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+        .logo { font-weight: 900; font-size: 1.3rem; color: var(--primary); text-decoration: none; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .container { max-width: 950px; margin: 3.5rem auto; padding: 0 6%; }
+        .header-box { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; }
+        .header-box h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .header-box span { color: var(--primary); font-size: 0.9rem; font-weight: 600; }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .card h2 { color: var(--primary); font-size: 1.3rem; margin-bottom: 0.8rem; }
+        .card p, .card li { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 0.7rem; }
+        .card ul { padding-left: 1.5rem; }
+        footer { text-align: center; padding: 2.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; margin-top: 3rem; }
+        a.inline-link { color: var(--primary); text-decoration: none; }
+        a.inline-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">HYBRA VOID</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html" class="active">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://discord.gg/j8MuzG97V" target="_blank">Support Server</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="header-box">
+        <h1>Terms of Service</h1>
+        <span>Effective Date: November 19, 2026 | Version 2.0</span>
+    </div>
+
+    <div class="card">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By inviting, accessing, or using the <strong>Hybra Void</strong> Discord application ("the Bot") or visiting our website, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service. If you do not agree with any part of these terms, you must immediately remove the Bot from your Discord server and cease all usage.</p>
+    </div>
+
+    <div class="card">
+        <h2>2. Compliance with Discord Guidelines</h2>
+        <p>All users and server administrators utilizing Hybra Void must strictly adhere to <a href="https://discord.com/terms" target="_blank" class="inline-link">Discord's Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank" class="inline-link">Discord's Community Guidelines</a>. Hybra Void is designed to assist in server moderation and engagement and must never be used to violate Discord policies.</p>
+    </div>
+
+    <div class="card">
+        <h2>3. Permitted Use & Restrictions</h2>
+        <p>You are granted a limited, non-exclusive, revocable license to use Hybra Void for legitimate community management. You agree <strong>NOT</strong> to:</p>
+        <ul>
+            <li>Attempt to exploit, reverse-engineer, DDoS, or disrupt the Bot's infrastructure, APIs, or hosting environment.</li>
+            <li>Spam slash commands or abuse the integrated AI features (<code>/ask</code>, <code>/roast</code>) to generate harmful, illegal, or abusive content.</li>
+            <li>Use automated scripts, self-bots, or macros to farm virtual currency (<code>Hybra Credits</code>) or experience points (<code>XP</code>).</li>
+            <li>Misuse moderation commands (<code>/nuke</code>, <code>/lockdown</code>, <code>/ban</code>) to grief or destroy communities.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>4. AI Moderation & Automated Actions</h2>
+        <p>Hybra Void includes automated AI-powered moderation and anti-raid shields (such as <strong>FireProof</strong> and automated profanity detection). Server owners and administrators are solely responsible for configuring permissions, log channels, and moderation thresholds. The developers of Hybra Void are not liable for accidental message deletions, timeouts, bans, or role removals triggered by server configurations.</p>
+    </div>
+
+    <div class="card">
+        <h2>5. Virtual Economy & Digital Items</h2>
+        <p>Features such as <code>Hybra Credits</code>, daily rewards, levels, and XP hold <strong>zero real-world monetary value</strong>. They cannot be exchanged, sold, or redeemed for real currency or external goods. We reserve the right to reset, adjust, or modify economy balances at any time.</p>
+    </div>
+
+    <div class="card">
+        <h2>6. Service Availability & Termination</h2>
+        <p>Hybra Void is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis. While we strive for 99.9% uptime, we do not guarantee uninterrupted service. We reserve the right to blacklist any user or server from accessing Hybra Void without prior notice if we detect abuse, malicious activity, or a breach of these Terms.</p>
+    </div>
+
+    <div class="card">
+        <h2>7. Changes to Terms & Contact</h2>
+        <p>We may revise these Terms of Service at any time to reflect new features or legal requirements. Continued use of the Bot after updates constitutes acceptance of the revised terms. For questions, bug reports, or appeals, please contact our team through the official <a href="https://discord.gg/j8MuzG97V" target="_blank" class="inline-link">HYBRA'S RISE Support Server</a>.</p>
+    </div>
+</div>
+
+<footer>
+    © 2026 <strong>HYBRA'S RISE</strong> — Hybra Void Development Team. All Rights Reserved.
+</footer>
+
+</body>
+</html>

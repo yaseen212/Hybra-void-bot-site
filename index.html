@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYBRA VOID | الذكاء الاصطناعي والحماية القصوى</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #07090e;
+            --bg-card: #0f131c;
+            --primary: #38bdf8;
+            --primary-glow: rgba(56, 189, 248, 0.35);
+            --secondary: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(129, 140, 248, 0.08) 0%, transparent 40%);
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8%;
+            background: rgba(7, 9, 14, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-badge {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--primary);
+            box-shadow: 0 0 15px var(--primary-glow);
+            -webkit-text-fill-color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 8% 5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+
+        .hero h1 {
+            font-size: 3.4rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 720px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.2rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #0284c7);
+            color: #030712;
+            box-shadow: 0 8px 25px var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(56, 189, 248, 0.55);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Features Grid */
+        .section {
+            padding: 5rem 8%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 0.7rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.98rem;
+        }
+
+        /* Commands Showcase */
+        .commands-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+        }
+
+        .cmd-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .cmd-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .cmd-name {
+            color: var(--primary);
+            font-family: monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .cmd-desc {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 8%;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="logo-badge">H</div>
+            <span>HYBRA VOID</span>
+        </div>
+        <div class="nav-links">
+            <a href="#features">المميزات</a>
+            <a href="#commands">الأوامر</a>
+            <a href="https://discord.gg/j8MuzG97V" target="_blank">مجتمع Hybra's Rise</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1572493751564374079" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.95rem;">أضف البوت</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>نظام FireProof & AI نشط الآن</span>
+        </div>
+        <h1>الجيل القادم من إدارة السيرفرات<br>مع <span>HYBRA VOID</span></h1>
+        <p>
+            بوت متكامل يغنيك عن عشرات البوتات؛ يجمع بين الحماية القصوى ضد التخريب، مراقبة الشات بالذكاء الاصطناعي، نظام التكت الدائم، الاقتصاد، والمستويات في مكان واحد.
+        </p>
+        <div class="cta-group">
+            <a href="https://discord.com/oauth2/authorize?client_id=1572493751564374079" target="_blank" class="btn btn-primary">
+                ⚡ إضافة البوت لسيرفرك
+            </a>
+            <a href="https://discord.gg/j8MuzG97V" target="_blank" class="btn btn-secondary">
+                🏛️ دخول سيرفر HYBRA'S RISE
+            </a>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="section-header">
+            <h2>أنظمة متكاملة في بوت واحد</h2>
+            <p>صُمم ليوفر لك الأمان الكامل والتفاعل المستمر بأعلى أداء</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">🛡️</span>
+                <h3>درع الحماية FireProof</h3>
+                <p>حماية فورية ضد محاولات التخريب؛ أي مشرف يحاول حذف قناة أو رتبة يتم تجريده من جميع صلاحياته في جزء من الثانية.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🧠</span>
+                <h3>ذكاء اصطناعي متطور</h3>
+                <p>مراقبة ذكية للألفاظ النابية بالعربية والعامية والإنجليزية مع نظام عقوبات متدرج، بالإضافة إلى محادثة تفاعلية ذكية.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">📩</span>
+                <h3>نظام التكت الدائم</h3>
+                <p>لوحة تذاكر احترافية بالأزرار تفتح غرفاً خاصة للتقديم للإدارة والدعم الفني مع استمارة جاهزة وتوثيق كامل.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">💰</span>
+                <h3>الاقتصاد والمستويات (XP)</h3>
+                <p>نظام عملات Hybra Credits بمكافآت يومية وتحويلات بين الأعضاء، مع احتساب نقاط الخبرة والمستويات تلقائياً.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🔊</span>
+                <h3>الغرف الصوتية المؤقتة</h3>
+                <p>إنشاء غرف صوتية خاصة للأعضاء تلقائياً بمجرد الدخول للقناة الرئيسية وحذفها فور مغادرة الجميع.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🎭</span>
+                <h3>الأدوار الذاتية وتتبع الدعوات</h3>
+                <p>توزيع الرتب بالأزرار، تتبع دقيق لدعوات الأعضاء، توثيق الاقتباسات، وإدارة الثريدات في نظام موحد.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="section">
+        <div class="section-header">
+            <h2>أبرز أوامر البوت (Slash Commands)</h2>
+            <p>تحكم كامل وسريع عبر أوامر السلاش المدمجة</p>
+        </div>
+        <div class="commands-box">
+            <div class="cmd-list">
+                <div class="cmd-item">
+                    <span class="cmd-name">/fireproof</span>
+                    <span class="cmd-desc">تفعيل درع الحماية الأقصى ضد تخريب السيرفر.</span>
+                </div>
+                <div class="cmd-item">
+                    <span class="cmd-name">/ask</span>
+                    <span class="cmd-desc">طرح أي سؤال على الذكاء الاصطناعي والحصول على إجابة فورية.</span>
+                </div>
+                <div class="cmd-item">
+                    <span class="cmd-name">/setup_tickets</span>
+                    <span class="cmd-desc">نشر لوحة فتح التذاكر واستمارات التقديم للإدارة.</span>
+                </div>
+                <div class="cmd-item">
+                    <span class="cmd-name">/setup_tempvoice</span>
+                    <span class="cmd-desc">تفعيل نظام الغرف الصوتية المؤقتة التلقائية.</span>
+                </div>
+                <div class="cmd-item">
+                    <span class="cmd-name">/daily & /credits</span>
+                    <span class="cmd-desc">استلام المكافآت اليومية وإدارة رصيد العملات.</span>
+                </div>
+                <div class="cmd-item">
+                    <span class="cmd-name">/quarantine</span>
+                    <span class="cmd-desc">عزل أي عضو مشبوه وسحب رتبه بالكامل بضغطة واحدة.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 <strong>HYBRA'S RISE</strong> — جميع الحقوق محفوظة لنظام <strong>Hybra Void</strong>.</p>
+    </footer>
+
+</body>
+  </html>
+  

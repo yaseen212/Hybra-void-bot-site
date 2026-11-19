@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | HYBRA VOID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #07090e;
+            --bg-card: #0f131c;
+            --primary: #38bdf8;
+            --secondary: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.8;
+            background-image: radial-gradient(circle at 80% 20%, rgba(129, 140, 248, 0.07) 0%, transparent 45%);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8%;
+            background: rgba(7, 9, 14, 0.9);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+        .logo { font-weight: 900; font-size: 1.3rem; color: var(--primary); text-decoration: none; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .container { max-width: 950px; margin: 3.5rem auto; padding: 0 6%; }
+        .header-box { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; }
+        .header-box h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .header-box span { color: var(--primary); font-size: 0.9rem; font-weight: 600; }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .card h2 { color: var(--primary); font-size: 1.3rem; margin-bottom: 0.8rem; }
+        .card p, .card li { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 0.7rem; }
+        .card ul { padding-left: 1.5rem; }
+        footer { text-align: center; padding: 2.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; margin-top: 3rem; }
+        a.inline-link { color: var(--primary); text-decoration: none; }
+        a.inline-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">HYBRA VOID</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html" class="active">Privacy Policy</a>
+        <a href="https://discord.gg/j8MuzG97V" target="_blank">Support Server</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="header-box">
+        <h1>Privacy Policy</h1>
+        <span>Effective Date: November 19, 2026 | Data Protection Standard</span>
+    </div>
+
+    <div class="card">
+        <h2>1. Overview & Commitment to Privacy</h2>
+        <p>Your privacy is a top priority for the <strong>Hybra Void</strong> development team. This Privacy Policy explains what information is collected when you interact with Hybra Void on Discord, how that data is processed, how it is protected, and your rights regarding your data.</p>
+    </div>
+
+    <div class="card">
+        <h2>2. Information We Collect</h2>
+        <p>Hybra Void operates on a strict data-minimization principle. We only collect and store technical identifiers necessary to provide bot functionality:</p>
+        <ul>
+            <li><strong>Discord Identifiers:</strong> User IDs, Guild (Server) IDs, Channel IDs, and Role IDs.</li>
+            <li><strong>Configuration Data:</strong> Server-specific settings such as log channel assignments, FireProof security status, AI moderation toggles, and TempVoice hub IDs.</li>
+            <li><strong>User Activity Metrics:</strong> Moderation warning counts, XP levels, virtual currency balances (<code>Hybra Credits</code>), daily reward timestamps, and invite tracking counts.</li>
+        </ul>
+        <p>We <strong>never</strong> collect passwords, email addresses, IP addresses, billing details, or direct messages outside of active support tickets.</p>
+    </div>
+
+    <div class="card">
+        <h2>3. Message Content & Third-Party AI Processing</h2>
+        <p>To power automated profanity detection and AI responses (<code>/ask</code>, <code>/roast</code>, and bot mentions), message text is transmitted securely via encrypted HTTPS requests to our AI inference provider (<strong>Groq API</strong>). Message content is processed in real time solely to generate a moderation verdict or reply and is <strong>never permanently logged or stored</strong> in our databases. If a violation occurs, the deleted message content may be sent directly to your server's designated private log channel for administrator review.</p>
+    </div>
+
+    <div class="card">
+        <h2>4. Data Storage & Security</h2>
+        <p>All persistent configuration and user progression records are stored securely on isolated server infrastructure with restricted administrative access. We implement reasonable technical safeguards to protect stored identifiers against unauthorized access, alteration, or disclosure. We never sell, rent, or trade user data to third parties.</p>
+    </div>
+
+    <div class="card">
+        <h2>5. Data Retention & User Rights (Data Deletion)</h2>
+        <p>Data is retained only as long as Hybra Void remains active in a server or as required to maintain your user profile. Under global privacy standards (including GDPR principles), you have the right to:</p>
+        <ul>
+            <li>Request a summary of the data stored associated with your Discord User ID.</li>
+            <li>Request complete deletion/reset of your stored warnings, XP, credits, or server configurations.</li>
+        </ul>
+        <p>To exercise your data rights, open a support ticket in our official <a href="https://discord.gg/j8MuzG97V" target="_blank" class="inline-link">HYBRA'S RISE Discord Server</a>, and our team will process your request within 72 hours.</p>
+    </div>
+
+    <div class="card">
+        <h2>6. Children's Privacy</h2>
+        <p>In accordance with Discord's Terms of Service, Hybra Void is not intended for individuals under the minimum age required to use Discord in their respective country (typically 13 years old). We do not knowingly collect data from underage users.</p>
+    </div>
+
+    <div class="card">
+        <h2>7. Policy Updates</h2>
+        <p>We may update this Privacy Policy periodically as we introduce new systems and commands. Any changes will be posted directly on this page with an updated effective date.</p>
+    </div>
+</div>
+
+<footer>
+    © 2026 <strong>HYBRA'S RISE</strong> — Hybra Void Security & Privacy. All Rights Reserved.
+</footer>
+
+</body>
+</html>

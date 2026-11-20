@@ -58,6 +58,7 @@
             background: linear-gradient(90deg, #fff, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-decoration: none;
         }
 
         .logo-badge {
@@ -76,7 +77,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.6rem;
             align-items: center;
         }
 
@@ -84,6 +85,7 @@
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
             transition: 0.3s;
         }
 
@@ -301,6 +303,25 @@
             margin-top: 4rem;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .nav-links { display: none; }
@@ -310,13 +331,15 @@
 <body>
 
     <nav>
-        <div class="logo">
+        <a href="https://yaseen212.github.io/Hybra-void-bot-site/" class="logo">
             <div class="logo-badge">H</div>
             <span>HYBRA VOID</span>
-        </div>
+        </a>
         <div class="nav-links">
             <a href="#features">المميزات</a>
             <a href="#commands">الأوامر</a>
+            <a href="https://yaseen212.github.io/Hybra-terms/">شروط الخدمة</a>
+            <a href="https://yaseen212.github.io/Hybra-privacy/">الخصوصية</a>
             <a href="https://discord.gg/j8MuzG97V" target="_blank">مجتمع Hybra's Rise</a>
             <a href="https://discord.com/oauth2/authorize?client_id=1572493751564374079" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.95rem;">أضف البوت</a>
         </div>
@@ -416,9 +439,14 @@
     </section>
 
     <footer>
+        <div class="footer-links">
+            <a href="https://yaseen212.github.io/Hybra-void-bot-site/">الرئيسية (Home)</a>
+            <a href="https://yaseen212.github.io/Hybra-terms/">شروط الخدمة (Terms of Service)</a>
+            <a href="https://yaseen212.github.io/Hybra-privacy/">سياسة الخصوصية (Privacy Policy)</a>
+            <a href="https://discord.gg/j8MuzG97V" target="_blank">سيرفر الدعم (Discord)</a>
+        </div>
         <p>© 2026 <strong>HYBRA'S RISE</strong> — جميع الحقوق محفوظة لنظام <strong>Hybra Void</strong>.</p>
     </footer>
 
 </body>
-  </html>
-  
+</html>
